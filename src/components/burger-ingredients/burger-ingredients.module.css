@@ -13,3 +13,12 @@
 	text-align: center;
 	list-style-type: none;
 }
+
+.ingredientsList {
+	position: relative;
+	top: 40px;
+	width: 600px;
+	height: 756px;
+	overflow-y: auto;
+	background: #000000;
+}

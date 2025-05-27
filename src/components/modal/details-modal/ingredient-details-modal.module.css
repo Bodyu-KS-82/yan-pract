@@ -1,0 +1,53 @@
+.img_bclock_first {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	width: 520px;
+	height: 240px;
+	background: #1c1c21;
+	border-width: 1px;
+}
+
+.img_second {
+	left: 20px;
+	width: 480px;
+	height: 240px;
+	border-width: 1px;
+}
+
+.name_text_third {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	width: 520px;
+	height: 30px;
+	margin-top: 16px;
+	border-width: 1px;
+}
+
+.property_values_fourth {
+	display: flex;
+	justify-content: center;
+	gap: 20px;
+	width: 516px;
+	height: 56px;
+	margin-top: 32px;
+}
+
+/* .property_values_fourth_one {
+    position: relative;
+    display: flex; 
+    justify-content: center;
+    gap: 20px;  
+    width: 516px;
+    height: 56px;
+  
+} */
+
+.property_item_fifth {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 100%;
+	text-align: center;
+}

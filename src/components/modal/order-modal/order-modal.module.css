@@ -1,0 +1,49 @@
+.order_number_first {
+	top: 120px;
+	left: 100px;
+	display: flex;
+	justify-content: center;
+	width: 520px;
+	height: 120px;
+	background: #1c1c21;
+	border-width: 1px;
+}
+
+.name_text_second {
+	display: flex;
+	justify-content: center;
+	width: 520px;
+	height: 30px;
+}
+
+.name_text_third {
+	top: 542px;
+	left: 100px;
+	display: flex;
+	justify-content: center;
+	width: 520px;
+	height: 24px;
+	background: #1c1c21;
+	border-width: 1px;
+}
+
+.name_text_fourth {
+	top: 574px;
+	left: 100px;
+	display: flex;
+	justify-content: center;
+	width: 520px;
+	height: 24px;
+	background: #1c1c21;
+	border-width: 1px;
+}
+
+.box_next_60 {
+	height: 60px;
+
+	/* top: 482px;
+    left: 978px;
+    width: 44px;
+    padding: 60px;
+    border-width: 0.5px; */
+}

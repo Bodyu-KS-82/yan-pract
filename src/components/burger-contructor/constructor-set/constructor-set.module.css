@@ -1,0 +1,44 @@
+.set_first {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+}
+
+.elements_second {
+	height: 465px;
+	overflow-y: auto;
+}
+
+.elements_look_third {
+	display: flex;
+	align-items: center;
+	margin-bottom: 16px;
+}
+
+.element_price_fourth {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	width: 568px;
+	height: 64px;
+	margin-left: 16px;
+}
+
+.element_cost_fifth {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	width: 119px;
+	height: 64px;
+	border-width: 1px;
+}
+
+.element_cost_sixth {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	height: 100%;
+	margin-bottom: 4px;
+	padding: 4px;
+	background: #000000;
+}
