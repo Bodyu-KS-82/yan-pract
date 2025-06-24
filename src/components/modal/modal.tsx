@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { createPortal } from 'react-dom';
 import styles from './modal.module.css';
 import { CloseIcon } from '@ya.praktikum/react-developer-burger-ui-components';
+import { ModalOverlay } from './modal-overlay.tsx';
 
 type ModalProps = {
 	isOpen: boolean;
@@ -46,7 +47,7 @@ export const Modal = ({
 					</p>
 					<CloseIcon
 						type='primary'
-						style={{ width: '24px', height: '24px' }}
+						className={styles.closeIcon}
 						onClick={() => isClose(false)}
 					/>
 				</div>
@@ -54,18 +55,7 @@ export const Modal = ({
 				{children}
 			</div>
 
-			<div
-				className={styles.overlay_third}
-				onClick={() => isClose(false)}
-				role='button'
-				tabIndex={0}
-				onKeyDown={(e) => {
-					if (e.key === 'Enter' || e.key === ' ') {
-						e.preventDefault();
-						isClose(false);
-					}
-				}}
-			/>
+			<ModalOverlay isClose={isClose} />
 		</>,
 		document.getElementById('modal-root')!
 	);

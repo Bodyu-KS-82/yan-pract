@@ -1,16 +1,13 @@
 import React from 'react';
-import { createPortal } from 'react-dom';
+// import { createPortal } from 'react-dom';
 import styles from './modal-overlay.module.css';
 
 type ModalOverlayProps = {
-	isOpen: boolean;
 	isClose: (value: boolean) => void;
 };
 
-export const ModalOverlay = ({ isOpen, isClose }: ModalOverlayProps) => {
-	if (!isOpen) return null;
-
-	return createPortal(
+export const ModalOverlay = ({ isClose }: ModalOverlayProps) => {
+	return (
 		<div
 			className={styles.parent_first}
 			onClick={() => isClose(false)}
@@ -22,7 +19,6 @@ export const ModalOverlay = ({ isOpen, isClose }: ModalOverlayProps) => {
 					isClose(false);
 				}
 			}}
-		/>,
-		document.getElementById('modal-root')!
+		/>
 	);
 };

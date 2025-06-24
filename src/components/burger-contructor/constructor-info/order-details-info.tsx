@@ -8,44 +8,17 @@ type OrderInfoProps = {
 	isOpen: boolean;
 	isClose: (value: boolean) => void;
 	contentText: string;
-	infoOrder: unknown[] | unknown;
+	// infoOrder: unknown[] | unknown;
 };
 
 export const OrderInfo = ({
 	isOpen,
 	// isClose,
 	// contentText,
-	infoOrder,
+	// infoOrder,
 }: OrderInfoProps) => {
 	if (!isOpen) return null;
-	console.log('infoOrder', infoOrder);
-	// const styleIdOrder = {
-	// 	// fontFamily: 'JetBrains Mono',
-	// 	// fontWeight: '700',
-	// 	// fontSize: '24px',
-	// 	// lineHeight: '30px',
-	// 	// letterSpacing: '0%',
-	// 	// textAlign: 'center',
-	// 	color: '#F2F2F3',
-	// };
-	// const styleIdOrderTrue = {
-	// 	// fontFamily: 'JetBrains Mono',
-	// 	// fontWeightt: '400',
-	// 	// fontSize: '16px',
-	// 	// lineHeight: '24px',
-	// 	// letterSpacing: '0%',
-	// 	// textAlign: 'center',
-	// 	color: '#F2F2F3',
-	// };
-	const styleIdOrderAnother = {
-		// fontFamily: 'JetBrains Mono',
-		// fontWeightt: '400',
-		// fontSize: '16px',
-		// lineHeight: '24px',
-		// letterSpacing: '0%',
-		// textAlign: 'center',
-		color: '#8585AD',
-	};
+	//  console.log('infoOrder', infoOrder);
 
 	return (
 		// <Modal isOpen={isOpen} isClose={isClose} contentText={contentText}>
@@ -82,7 +55,7 @@ export const OrderInfo = ({
 			</div>
 			<div className='p-2'></div>
 			<div className={styles.name_text_fourth}>
-				<p className='text text_type_main-default' style={styleIdOrderAnother}>
+				<p className={`text text_type_main-default ${styles.style_text_color}`}>
 					Дождитесь готовности на орбитальной станции
 				</p>
 			</div>

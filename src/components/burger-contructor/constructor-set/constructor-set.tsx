@@ -43,14 +43,14 @@ export const ConstructorSet = ({
 	const Elements = () => {
 		return (
 			<div className={styles.set_first}>
-				<div style={{ marginLeft: '24px' }}>
+				<div className={styles.style_ml24}>
 					<ConstructorElement
 						type='top'
 						isLocked={true}
 						text={`${bunType.name} (верх)`}
 						price={bunType.price}
 						thumbnail={bunType.image}
-						style={{ marginLeft: '56px' }}
+						className={styles.style_ml56}
 					/>
 				</div>
 
@@ -67,7 +67,7 @@ export const ConstructorSet = ({
 						</div>
 					))}
 				</div>
-				<div style={{ marginLeft: '24px', marginBottom: '40px' }}>
+				<div className={styles.style_ml24_mb40}>
 					<ConstructorElement
 						type='bottom'
 						isLocked={true}
@@ -81,38 +81,24 @@ export const ConstructorSet = ({
 					<div className={styles.element_cost_fifth}>
 						<div className={styles.element_cost_sixth}>
 							<p
-								className='text text_type_main-large'
-								style={{
-									fontFamily: 'Iceland',
-									fontWeight: '400',
-									fontSize: '48px',
-									lineHeight: '36px',
-									letterSpacing: '0%',
-									textAlign: 'right',
-									verticalAlign: 'middle',
-								}}>
+								className={`text text_type_main-large ${styles.style_text_large}`}>
 								{'610'}
 							</p>
 							<CurrencyIcon type='primary' />
 						</div>
 					</div>
 
-					<div style={{ marginLeft: '40px' }} />
+					<div className={styles.style_ml40} />
 
-					<Button
-						htmlType='button'
-						type='primary'
-						size='medium'
-						onClick={() => GetOrder(true)}
-						style={{
-							width: '215px',
-							height: '64px',
-							borderRadius: '64px',
-							padding: '20px',
-							marginRight: '24px',
-						}}>
-						Оформить заказ
-					</Button>
+					<div className={styles.style_button_order}>
+						<Button
+							htmlType='button'
+							type='primary'
+							size='large'
+							onClick={() => GetOrder(true)}>
+							Оформить заказ
+						</Button>
+					</div>
 				</div>
 			</div>
 		);

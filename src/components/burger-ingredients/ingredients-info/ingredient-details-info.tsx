@@ -17,30 +17,6 @@ export const IngredientDetailsInfo = ({
 	// contentText,
 	infoData,
 }: IngredientDetailsInfoProps) => {
-	const textStyleFirst = {
-		width: '120px',
-		height: '24',
-		fontFamily: 'JetBrains Mono',
-		fontWeight: '400',
-		fontSize: '16px',
-		lineHeight: '24px',
-		letterSpacing: '0%',
-		textAlign: 'center',
-		color: '#8585AD',
-	};
-
-	const textStyleOther = {
-		width: '120px',
-		height: '24',
-		fontFamily: 'JetBrains Mono',
-		fontWeight: '400',
-		fontSize: '16px',
-		lineHeight: '24px',
-		letterSpacing: '0%',
-		textAlign: 'center',
-		color: '#8585AD',
-	};
-
 	return (
 		<>
 			<div className={styles.img_bclock_first}>
@@ -53,42 +29,50 @@ export const IngredientDetailsInfo = ({
 			<div className={styles.name_text_third}>
 				<p className='text text_type_main-medium'>{infoData.name}</p>
 			</div>
-			<div style={{ marginBottom: '32px' }}></div>
+			<div className={styles.style_mb32}></div>
 			<div className={styles.property_values_fourth}>
 				<div className={styles.property_item_fifth}>
-					<p className='text text_type_main-default' style={textStyleFirst}>
+					<p
+						className={`text text_type_main-default ${styles.text_style_other}`}>
 						Калории, ккал
 					</p>
-					<p className='text text_type_main-default' style={textStyleFirst}>
+					<p
+						className={`text text_type_main-default ${styles.text_style_other}`}>
 						{infoData.calories}
 					</p>
 				</div>
 				<div className={styles.property_item_fifth}>
-					<p className='text text_type_main-default' style={textStyleOther}>
+					<p
+						className={`text text_type_main-default ${styles.text_style_other}`}>
 						Белки, г
 					</p>
-					<p className='text text_type_main-default' style={textStyleOther}>
+					<p
+						className={`text text_type_main-default ${styles.text_style_other}`}>
 						{infoData.proteins}
 					</p>
 				</div>
 				<div className={styles.property_item_fifth}>
-					<p className='text text_type_main-default' style={textStyleOther}>
+					<p
+						className={`text text_type_main-default ${styles.text_style_other}`}>
 						Жиры, г
 					</p>
-					<p className='text text_type_main-default' style={textStyleOther}>
+					<p
+						className={`text text_type_main-default ${styles.text_style_other}`}>
 						{infoData.fat}
 					</p>
 				</div>
 				<div className={styles.property_item_fifth}>
-					<p className='text text_type_main-default' style={textStyleOther}>
+					<p
+						className={`text text_type_main-default ${styles.text_style_other}`}>
 						Углеводы, г
 					</p>
-					<p className='text text_type_main-default' style={textStyleOther}>
+					<p
+						className={`text text_type_main-default ${styles.text_style_other}`}>
 						{infoData.carbohydrates}
 					</p>
 				</div>
 			</div>
-			<div style={{ marginBottom: '20px' }}></div>
+			<div className={styles.style_mb20}></div>
 		</>
 	);
 };
