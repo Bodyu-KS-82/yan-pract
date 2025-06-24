@@ -1,24 +1,22 @@
 import React from 'react';
-import styles from './ingredient-details-modal.module.css';
+import styles from './ingredient-details-info.module.css';
 // import { CloseIcon } from '@ya.praktikum/react-developer-burger-ui-components';
-import { Modal } from '../modal.tsx';
+// import { Modal } from '../modal.tsx';
+import { TIngredient } from '../../../utils/types.ts';
 
-type IngredientDetailsModalProps = {
+type IngredientDetailsInfoProps = {
 	isOpen: boolean;
 	isClose: (value: boolean) => void;
 	contentText: string;
-	infoData: unknown[] | unknown;
+	infoData: TIngredient | null;
 };
 
-export const IngredientDetailsModal = ({
-	isOpen,
-	isClose,
-	contentText,
+export const IngredientDetailsInfo = ({
+	// isOpen,
+	// isClose,
+	// contentText,
 	infoData,
-}: IngredientDetailsModalProps) => {
-	if (!isOpen) return null; // false не рендерим
-	console.log('infoData', infoData);
-
+}: IngredientDetailsInfoProps) => {
 	const textStyleFirst = {
 		width: '120px',
 		height: '24',
@@ -44,12 +42,11 @@ export const IngredientDetailsModal = ({
 	};
 
 	return (
-		<Modal isOpen={isOpen} isClose={isClose} contentText={contentText}>
+		<>
 			<div className={styles.img_bclock_first}>
-				{/* <div className={styles.img_first}> */}
 				<img
 					src={infoData.image_large}
-					alt={`${infoData}`}
+					alt={`${infoData.name}`}
 					className={styles.img_second}
 				/>
 			</div>
@@ -92,7 +89,6 @@ export const IngredientDetailsModal = ({
 				</div>
 			</div>
 			<div style={{ marginBottom: '20px' }}></div>
-			{/* </div> */}
-		</Modal>
+		</>
 	);
 };

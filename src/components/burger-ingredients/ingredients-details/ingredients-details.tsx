@@ -6,7 +6,8 @@ import {
 	Counter,
 } from '@ya.praktikum/react-developer-burger-ui-components';
 
-import { IngredientDetailsModal } from '../../modal/details-modal/ingredient-details-modal.tsx';
+import { IngredientDetailsInfo } from '../ingredients-info/ingredient-details-info.tsx';
+import { Modal } from '../../modal/modal.tsx';
 
 type IngredientsDetailsProps = {
 	ingredients: TIngredient[];
@@ -19,7 +20,7 @@ export const IngredientsDetails = ({
 	modalInfoIngredients,
 	setModalInfoIngredients,
 }: IngredientsDetailsProps) => {
-	const [details, setDetails] = useState(); // передать данные через пропс в Modal
+	const [details, setDetails] = useState<TIngredient | null>(null); // передать данные через пропс в Modal
 	const contentText = 'Детали ингредиента';
 
 	const GetInfoDetails = (id: string) => {
@@ -69,12 +70,25 @@ export const IngredientsDetails = ({
 				))}
 			</div>
 
-			<IngredientDetailsModal
-				isOpen={modalInfoIngredients}
-				isClose={setModalInfoIngredients}
-				contentText={contentText}
-				infoData={details}
-			/>
+			<Modal
+				isOpen={modalInfoIngredients && details !== null}
+				isClose={() => {
+					setModalInfoIngredients(false);
+					setDetails(null);
+				}}
+				contentText={contentText}>
+				{details && (
+					<IngredientDetailsInfo
+						isOpen={modalInfoIngredients}
+						isClose={() => {
+							setModalInfoIngredients(false);
+							setDetails(null);
+						}}
+						contentText={contentText}
+						infoData={details}
+					/>
+				)}
+			</Modal>
 			{/* <Modal modalInfoIngredients={modalInfoIngredients} setModalInfoIngredients = {setModalInfoIngredients} /> */}
 		</>
 	);

@@ -8,7 +8,8 @@ import {
 	Button,
 } from '@ya.praktikum/react-developer-burger-ui-components';
 
-import { OrderModal } from '../../modal/order-modal/order-details-modal.tsx';
+import { Modal } from '../../modal/modal.tsx';
+import { OrderInfo } from '../constructor-info/order-details-info.tsx';
 
 type ConstructorSetProps = {
 	ingredients: TIngredient[];
@@ -121,12 +122,17 @@ export const ConstructorSet = ({
 		<>
 			<Elements />
 
-			<OrderModal
+			<Modal
 				isOpen={modalInfoOrder}
 				isClose={setModalInfoOrder}
-				contentText={contentText}
-				infoOrder={infoOrder}
-			/>
+				contentText={contentText}>
+				<OrderInfo
+					isOpen={modalInfoOrder}
+					isClose={setModalInfoOrder}
+					contentText={contentText}
+					infoOrder={infoOrder}
+				/>
+			</Modal>
 		</>
 	);
 };

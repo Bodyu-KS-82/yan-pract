@@ -1,24 +1,24 @@
 import React from 'react';
-import styles from './order-modal.module.css';
+import styles from './order-details-info.module.css';
 // import { CloseIcon } from '@ya.praktikum/react-developer-burger-ui-components';
-import { Modal } from '../modal.tsx';
+// import { Modal } from '../modal.tsx';
 import DoneIcon from './image/done.svg';
 
-type OrderModalProps = {
+type OrderInfoProps = {
 	isOpen: boolean;
 	isClose: (value: boolean) => void;
 	contentText: string;
 	infoOrder: unknown[] | unknown;
 };
 
-export const OrderModal = ({
+export const OrderInfo = ({
 	isOpen,
-	isClose,
-	contentText,
+	// isClose,
+	// contentText,
 	infoOrder,
-}: OrderModalProps) => {
-	if (!isOpen) return null; // false не рендерим
-	console.log('infoOrder', infoOrder); // будущие данные
+}: OrderInfoProps) => {
+	if (!isOpen) return null;
+	console.log('infoOrder', infoOrder);
 	// const styleIdOrder = {
 	// 	// fontFamily: 'JetBrains Mono',
 	// 	// fontWeight: '700',
@@ -48,7 +48,8 @@ export const OrderModal = ({
 	};
 
 	return (
-		<Modal isOpen={isOpen} isClose={isClose} contentText={contentText}>
+		// <Modal isOpen={isOpen} isClose={isClose} contentText={contentText}>
+		<>
 			<div className='p-4'></div>
 			<div className={styles.order_number_first}>
 				<p className='text text_type_digits-large'>034536</p>
@@ -87,6 +88,7 @@ export const OrderModal = ({
 			</div>
 
 			<div className='p-15'></div>
-		</Modal>
+		</>
+		// </Modal>
 	);
 };
