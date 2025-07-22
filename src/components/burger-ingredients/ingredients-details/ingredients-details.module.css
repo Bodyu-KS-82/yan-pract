@@ -1,0 +1,75 @@
+/* ingredients-details.module.css */
+
+.parent_first {
+	top: 94px;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 24px;
+	width: 600px;
+
+	/* height: 208px; */
+	height: auto;
+	padding-right: 16px;
+	padding-left: 16px;
+}
+
+.component_second {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 4px;
+	width: 272px;
+
+	/* height: 208px; */
+	height: auto;
+}
+
+.img_third {
+	width: 240px;
+	height: 120px;
+	margin-bottom: 4px;
+	border-width: 1px;
+}
+
+.counter_fourth {
+	position: absolute;
+	left: 240px;
+	width: 32px;
+	height: 32px;
+	border-width: 1px;
+}
+
+.price_fifth {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	margin-bottom: 4px;
+
+	/* border: 1px solid #4C4CFF; */
+	padding: 4px;
+
+	/* background: #131316; */
+	background: #000000;
+}
+
+.price_fifth_p {
+	margin: 0;
+	font-weight: 400;
+	font-size: 1.75rem;
+	font-family: 'Iceland', sans-serif;
+	line-height: 1.5;
+	letter-spacing: 0%;
+	text-align: center;
+}
+
+.ingredient_name {
+	width: 272px;
+	height: 48px;
+
+	/* background: #131316; */
+
+	/* border: 1px solid #4C4CFF; */
+	background: #000000;
+	border-width: 1px;
+}

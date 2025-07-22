@@ -1,0 +1,45 @@
+.modalWrapper_first {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	z-index: 501;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 720px;
+
+	/* padding: 40px; */
+	padding-top: 40px;
+	padding-right: 40px;
+	padding-left: 40px;
+	background: #1c1c21;
+	border: 1px solid #4c4cff33;
+	border-radius: 40px;
+	box-shadow:
+		0 0 1px rgb(0 0 0 / 10%),
+		0 4px 8px rgb(0 0 0 / 10%),
+		0 16px 24px rgb(0 0 0 / 10%),
+		0 24px 32px rgb(0 0 0 / 10%);
+	transform: translate(-50%, -50%);
+}
+
+.child_title_second {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	padding: 0 20px;
+}
+
+/* .overlay_third {
+	position: fixed;
+	inset: 0;
+	z-index: 500;
+	background-color: rgb(0 0 0 / 50%);
+} */
+
+.closeIcon {
+	width: 24px;
+	height: 24px;
+	cursor: pointer;
+}
